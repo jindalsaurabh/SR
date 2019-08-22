@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>P2P Testing using Streamroot Graph Library</title>
+        <link
+            href="https://fonts.googleapis.com/css?family=Roboto"
+            rel="stylesheet"
+        />
+        <style>
+            body {
+                font-family: "Roboto", sans-serif;
+            }
+        </style>
+        <link
+            rel="stylesheet"
+            href="https://samples.streamroot.io/web/assets/demo-pages.css"
+        />
+
+        <!-- Video.js Builds -->
+        <link
+            href="https://vjs.zencdn.net/7.4.1/video-js.min.css"
+            rel="stylesheet"
+        />
+        <script src="https://vjs.zencdn.net/7.4.1/video.min.js"></script>
+
+        <!-- Streamroot Builds -->
+        <script src="https://cdn.streamroot.io/videojs-hls-dna-plugin/1/stable/videojs-hls-dna-plugin.js#streamrootKey=1c04d9d9-96d7-4bce-be8b-ab38b319047c"></script>
+        <script src="https://cdn.streamroot.io/videojs-hlsjs-plugin/1/stable/videojs-hlsjs-plugin.js"></script>
+
+        <!-- Graphs -->
+        <script src="https://tools.streamroot.io/usage-graphs/stable/graphs.js"></script>
+    </head>
+
+    <body>
+        <header></header>
+        <center>
+            <h2>P2P Testing using Streamroot Graph Library</h2>
+            <div>
+                <video
+                    id="SJ-player"
+                    width="512"
+                    height="288"
+                    class="video-js vjs-default-skin"
+                    controls
+                    autoplay
+                    muted
+                >
+                    <source
+                        src="https://bitdash-a.akamaihd.net/content/MI201109210084_1/m3u8s/f08e80da-bf1d-4e3d-8899-f0f6155f6efa.m3u8"
+                        type="application/x-mpegURL"
+                    />
+                </video>
+            </div>
+            <div id="streamroot-graphs"></div>
+        </center>
+        <script>
+            var options = {
+                html5: {
+                    dnaConfig: {},
+                    hlsjsConfig: {}
+                }
+            };
+            var player = videojs("SJ-player", options);
+        </script>
+    </body>
+    ​
+</html>
+​
